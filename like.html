@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表白木马</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            perspective: 1000px;
+            background: url(images/bg.jpg) no-repeat;
+            background-size: 100%;
+        }
+        h1 {
+            width: 400px;
+            margin: 10px auto;
+            color: #fff;
+            text-align: center;
+            font-family: 'kaiti';
+            animation: text 1.5s linear infinite alternate;
+        }
+        @keyframes text {
+            0% {
+                transform: translateX(0px);
+            }
+          
+            50% {
+                transform: translateX(-15px);
+            }
+          
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        section {
+            position: relative;
+            width: 240px;
+            height: 240px;
+            margin: 50px auto;
+            transform-style: preserve-3d;
+            animation: man 12s linear infinite;
+        }
+
+        @keyframes man {
+            0% {
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateX(-10deg) rotateY(360deg);
+            }
+        }
+
+        section div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        section div:nth-child(1) {
+            transform: translateZ(300px);
+        }
+        section div:nth-child(2) {
+            transform: rotateY(60deg) translateZ(300px);
+        }
+        section div:nth-child(3) {
+            transform: rotateY(120deg) translateZ(300px);
+        }
+        section div:nth-child(4) {
+            transform: rotateY(180deg) translateZ(300px);
+        }
+        section div:nth-child(5) {
+            transform: rotateY(240deg) translateZ(300px);
+        }
+        section div:nth-child(6) {
+            transform: rotateY(300deg) translateZ(300px);
+        }
+        .text {
+            position: absolute;
+            bottom: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 752px;
+            height: 20px;
+            color: #fff;
+            font-size: 16px;
+            white-space: nowrap;
+            animation: love 13s steps(47) forwards;
+            overflow: hidden;
+        }
+        @keyframes love {
+            0% {
+                width:0px;
+            }
+            100% {
+                width: 752px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>时光不老，我们不散！</h1>
+    </header>
+    <section>
+        <div><img src="images/1.png" alt=""></div>
+        <div><img src="images/2.png" alt=""></div>
+        <div><img src="images/3.png" alt=""></div>
+        <div><img src="images/4.png" alt=""></div>
+        <div><img src="images/5.png" alt=""></div>
+        <div><img src="images/6.png" alt=""></div>
+    </section>
+    <div class="text">能够遇见你是我最大的幸运，对我来说，不是在最美好的时光遇见了你，而是遇见你后都是最美好的时光！</div>
+    <!-- <div class="text2">有了你,生活变得丰富多彩；</div>
+    <div class="text3">有了你，世界变得如此迷人；</div>
+    <div class="text4">你是我的世界，我的世界是你，</div> -->
+    <!-- <div class="text5">对我来说，不是在最美好的时光遇见了你，</div>
+    <div class="text6">而是遇见你后都是最美好的时</div> -->
+</body>
+</html>
